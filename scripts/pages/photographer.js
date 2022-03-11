@@ -23,7 +23,7 @@ async function getJsonElements(e){
 	//Récuperation de l'Id dans l'URL
 	getURLId()
 	// Récupération des données en json
-	let res = await fetch('./data/photographers.json')
+	let res = await fetch('../data/photographers.json')
 	if(res.ok){
 		data = await res.json()
 	} else {

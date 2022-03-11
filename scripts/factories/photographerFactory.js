@@ -5,7 +5,7 @@ function photographerFactory(data) {
 	const { name, portrait, city, country, tagline, price, id } = data
 
 	//Recuperation de la photo de profil
-	const photographerPortrait = `assets/media/Photographers ID Photos/${portrait}`
+	const photographerPortrait = `../assets/media/Photographers ID Photos/${portrait}`
 
 	//Récupération de l'id dans l'URL
 	const queryString = window.location.search 
@@ -31,7 +31,7 @@ function photographerFactory(data) {
 		const priceDiv = document.createElement('div')
 		const infosDiv = document.createElement('div')
 		article.classList.add('profile')
-		profileHeader.setAttribute('href', `photographer.html?id=${id}`)
+		profileHeader.setAttribute('href', `./src/photographer.html?id=${id}`)
 		profileHeader.setAttribute('aria-label', `profile de ${name}`)
 		profileHeader.setAttribute('aria-label', `informations sur ${name}`)
 		profileHeader.setAttribute('role', 'link')

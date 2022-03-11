@@ -8,8 +8,8 @@ function mediaFactory(data) {
 	//Recuperation des photos et videos correspondantes au profil via son nom dans sa carte de presentation
 	const photographerName = document.querySelector('.photographer-name').innerText
 	const photographerFirstName = photographerName.substring(0, photographerName.indexOf(' ')).replace('-', ' ')
-	const imageAsset = `assets/media/${photographerFirstName}/${image}`
-	const videoAsset = `assets/media/${photographerFirstName}/${video}`
+	const imageAsset = `../assets/media/${photographerFirstName}/${image}`
+	const videoAsset = `../assets/media/${photographerFirstName}/${video}`
 
 	//Creation des cartes dans la galerie
 	function getMediaCardDOM() {
