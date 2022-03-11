@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Fisheye - photographe </title>
+  </head>
+  <body>
+    <header id="header">
+      <a href="./index.html" class="logo" aria-label="FishEye Home page"><img class="logo" src="assets/images/logo.png" alt="FishEye Home page"/></a>
+    </header>
+    <main id="main">
+      <article class="photographer-section">
+      </article>
+      <div class="like-and-price" tabindex="0">
+        <div class="like">
+            <span class="like-number">0</span>
+            <span class="fas fa-heart fa-lg heart-total icon" aria-label="likes"></span>
+          </div>
+          <div class="price">
+              <span id="price"></span>
+              € / jour
+          </div>
+        </div>
+      <div class="photo-section">
+        <div class="filter-section">
+          <label class="filter-label" for="filters-dropdown" tabindex="0">Trier par</label>
+          <select name="filter-dropdown" id="filters-dropdown" onchange="getSelectValue()">
+            <option class="filter-btn filter-popularity" value="Popularite">Popularité</option>
+            <option class="filter-btn filter-date" value="Date">Date</option>
+            <option class="filter-btn filter-title" value="Titre">Titre</option>
+          </select>
+        </div>
+        <div class="cards-photo">
+        </div>
+      </div>
+    </main>
+    <div id="contact_modal">
+			<div class="modal" role="dialog" aria-describedby="formContact" aria-hidden="true" aria-modal="true" tabindex="0">
+				<div class="modal-header">
+          <div class="contact-title" tabindex="0">
+            <h2>Contactez-moi</h2>
+            <span class="contact-name"></span>
+          </div>
+        </div>
+				<form>
+					<div role="group" id="formContact">
+						<label for="firstname" tabindex="0">Prénom</label>
+						<input type="text" name="firstname" id="firstname" class="form-champ" minlength="2" required aria-required="true">
+            <label for="lastname" tabindex="0">Nom</label>
+						<input type="text" name= "lastname" id="lastname" class="form-champ" minlength="2" required aria-required="true">
+            <label for="email" tabindex="0">Email</label>
+						<input type="text" name= "email" id="email" class="form-champ" required aria-required="true">
+            <label for="message" class="label-message" tabindex="0">Votre message</label>
+						<textarea name="message" id="message" cols="50" rows="4" class="form-champ" aria-required="false"></textarea>
+					</div>
+          <button class="contact_button">Envoyer</button>
+				</form>
+        <img src="assets/icons/close.svg" class="form_close" alt="bouton fermer" onclick="closeModal()" onkeypress="closeModal()" tabindex="0"/>
+			</div>
+		</div>
+    <div class="lightbox-modal lightbox-modal-disable" role="dialog" tabindex="-1">
+      <div class="lightbox-container">
+      </div>
+      <button class="lightbox-prev" tabindex="-1" aria-hidden="false">
+        <span class="fas fa-chevron-up fa-3x lightbox-prev-i icon" aria-label="élement précédent" ></span>
+      </button>
+      <button class="lightbox-next" tabindex="-1" aria-hidden="false">
+        <span class="fas fa-chevron-up fa-3x lightbox-next-i icon" aria-label="élement suivant"></span>
+      </button>
+      <button class="lightbox-close icon" tabindex="-1" aria-hidden="false">
+        <span class="fas fa-times fa-3x" aria-label="fermer lighbox"></span>
+      </button>
+    </div>
+    <script src="/scripts/pages/photographer.js"></script>
+    <script src="/scripts/factories/photographerFactory.js"></script>
+    <script src="/scripts/factories/mediaFactory.js"></script>
+    <script src="/scripts/utils/contactForm.js"></script>
+  </body>
+</html>
