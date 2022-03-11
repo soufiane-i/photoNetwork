@@ -4,7 +4,7 @@
 //Fonction permettant de récuperer les informations sur les photogrpahes dans le JSON 
 async function getPhotographers() {
 	// Penser à remplacer par les données récupérées dans le json
-	let res = await fetch('../data/photographers.json')
+	let res = await fetch('./data/photographers.json')
 	if (res.ok) {
 		data = await res.json()
 	} else {
